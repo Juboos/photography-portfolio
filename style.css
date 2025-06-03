@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Cormorant+SC:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ancizar Serif", serif;;
+  color: white;
+}
+
+body {
+  height: 100vh; 
+  background: #0A0A0A;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  height: 6vh;
+  margin: 10px 0;
+}
+
+.logo {
+  font-family: "Cormorant SC", serif;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.icon {
+  width: 40px;
+  border: 2px solid #ff3939;
+  border-radius: 50%;
+  background: white;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+a:hover {
+  text-shadow: 0 0 4px rgb(255, 255, 255);
+}
+
+main {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  height: 90vh;
+}
+
+.square {
+  height: 30vh;
+}
+
+.square img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+} 
+
+.square img:hover {
+  opacity: 0.7;
+  cursor: pointer;
+} 
+
+.modal {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  overflow: auto;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modalContent {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalImg {
+  max-height: 95vh;
+  max-width: 95vw;
+}
+
+.close {
+  position: absolute;
+  top: 1em;
+  right: 1.5em;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.close img {
+  width: 30px;
+  background: white;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.close img:hover {
+  background: rgb(226, 226, 226);
+
+}
+
+/* .prev {
+  position: absolute;
+  bottom: 5.1%;
+  left:45%;
+  cursor: pointer;
+}
+
+.next {
+  position: absolute;
+  bottom: 5%;
+  right: 45%;
+  cursor: pointer;
+}
+
+.slideBtns img {
+  width: 30px;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 5px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.slideBtns img:hover {
+  background: rgb(232, 232, 232);
+
+} */
+
+.modal.appear {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal.appear .modalImg {
+  animation: zoom 0.3s linear;
+
+}
+
+@keyframes zoom {
+  form {
+    transform: scale(0);
+  }
+
+  to { 
+    transform: scale(1)
+  }
+}
+
+/* main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 94vh;
+  gap: 10px;
+  
+}
+
+.card {
+  background-size:cover;
+  background-repeat: no-repeat;
+  flex: 1;
+}
+
+.card:hover {
+  flex: 2;
+  height: 100%;
+}
+
+/* Gallery Page */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+ .card {
+  display: flex;
+
+
+}
+
+.card img {
+  width: 20%;
+}
+
+/* Contact Page */
+/* 
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 400px;
+}
+
+.input {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid #ff3939;
+  border-radius: 5px;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  padding: 1rem;
+}
+
+.input:focus {
+  outline: none;
+  border: 1px solid #ff0000;
+
+}
+
+.submit {
+  background: #ff3939;
+  border: 1px solid #ff3939;
+  border-radius: 5px;
+  width: fit-content;
+  display: flex;
+  align-self: center;
+  padding: 0.5rem 1.5rem;
+  font-size: 20px;
+}
+
+.submit:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+ */
