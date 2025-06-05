@@ -1,4 +1,4 @@
-const images = document.querySelectorAll(".square img");
+const images = document.querySelectorAll(".card img");
 const modal = document.querySelector(".modal");
 const modalImg = document.querySelector(".modalImg");
 const close = document.querySelector(".close");
